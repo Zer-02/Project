@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Student registration form</title>
+ <link rel="stylesheet" type="text/css" href="stdreg.css" />
+<style>
+body{
+background-image:
+url('https://i.pinimg.com/originals/0c/ea/6f/0cea6fabe4d9d5256e0d1b2474927732.jpg');
+ background-size: 1540px 800px
+}
+.container {
+margin-top:100px;
+ padding: 16px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height:650px;
+width:400px;
+margin-right:auto;
+margin-left:auto;
+}
+</style>
+ </head>
+ <body class="background-image" >
+ <div class="container" style="background-color:white">
+ <div class="panel-heading text-center">
+ <h1>ATTENDANCE Form</h1>
+ </div>
+ <div class="panel-body">
+ <form method="POST" action="attenconn.php">
+<div class="form-group">
+ <label for="id">Rollno</label>
+ <input
+ type="text"
+ class="form-control"
+ id="firstName"
+ name="id"
+ />
+ </div>
+ <div class="form-group">
+ <label for="name">Name</label>
+ <input
+ type="text"
+ class="form-control"
+ id="firstName"
+ name="name"
+ />
+ </div>
+ <div class="form-group">
+ <label for="place">Month</label>
+ <input
+ type="text"
+ class="form-control"
+ id="lastName"
+ name="place"
+ />
+ </div>
+ <div class="form-group">
+
+ <div class="form-group">
+ <label for="phno">Contact no</label>
+ <input
+ type="number"
+ class="form-control"
+ id="email"
+ name="phno"
+ />
+ </div>
+ <div class="form-group">
+ <label for="cmp">Attendance</label>
+ <input
+ type="text"
+ class="form-control"
+ id="password"
+ name="cmp"
+ />
+ </div>
+ <input type="submit" class="rip" name="ins" value="SUBMIT" />
+ </form>
+ <form method="POST" action="attentab.php">
+ <input type="submit" class="rip" name="ins" value="view table"/>
+ </form>
+</div>
+ </body>
+</html>

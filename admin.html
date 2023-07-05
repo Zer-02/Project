@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin page</title>
+<link rel="stylesheet" href="admin.css">
+<style>
+body{
+ background-image:
+url('https://envato-shoebox-0.imgix.net/6ecf/db35-3fca-441c-ae87-c7bac504fd50/20180720-Capture0002-2.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=063a7806abf693e350069babf7895e9c');
+ background-size: 1547px 720px;
+}
+.middle{
+padding:20px 20px;
+margin-left:auto;
+margin-right:auto;
+height:400px;
+width:500px;
+}
+</style>
+</head>
+<script>
+ function myFunction() {
+ alert("Continue to LOGOUT");
+ }
+
+</script>
+<body>
+<div class="topnav">
+ <a class="active" href="home.html">Home</a>
+ <a href="constant.html">Contact</a>
+ <a href="teachnotifi.html">Notifications</a>
+ <a href="search.html">Student Search</a>
+ <a onclick="myFunction()" href="home.html">LogOut</a>
+</div>
+<div class="middle">
+<div class="row">
+ <div class="column">
+ <div class="card">
+ <div class="container">
+ <h2>Attendance</h2>
+ <p>Manage Attendance here:</p>
+ <p><a href="attendance.html"><button class="button">GO</button></a></p>
+ </div>
+ </div>
+ </div>
+ <div class="row">
+ <div class="column">
+ <div class="card">
+ <div class="container">
+ <h2>Mark Sheet</h2>
+ <p>Manage marks here </p>
+ <p><a href="marks.html"><button class="button">GO</button></a></p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="row">
+ <div class="column">
+ <div class="card">
+ <div class="container">
+ <h2>Registered student log:</h2>
+ <p>Manage registered students</p>
+ <p> <form method="POST" action="regtab.php">
+ <button formaction="regtab.php" class="button">Go</button>
+ </form> </p>
+ </div>
+ </div>
+ </div>
+ </div>
+</body>
+</html>

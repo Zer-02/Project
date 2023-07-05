@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Student registration form</title>
+ <link rel="stylesheet" type="text/css" href="stdreg.css" />
+<style>
+body{
+background-image:
+url('https://static.vecteezy.com/system/resources/previews/001/433/959/non_2x/light-blue-background-withstars-vector.jpg');
+ background-size: 1540px 800px
+}
+.container {
+margin-top:100px;
+ padding: 16px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height:650px;
+width:400px;
+margin-right:auto;
+margin-left:auto;
+}
+</style>
+ </head>
+ <body class="background-image" >
+ <div class="container" style="background-color:white">
+ <div class="panel-heading text-center">
+ <h1>MARKS Form</h1>
+ </div>
+ <div class="panel-body">
+ <form method="POST" action="marksconn.php">
+<div class="form-group">
+ <label for="id">Rollno</label>
+ <input
+ type="text"
+ class="form-control"
+ id="firstName"
+ name="id"
+ />
+ </div>
+ <div class="form-group">
+ <label for="name">Name</label>
+ <input
+ type="text"
+ class="form-control"
+ id="firstName"
+ name="name"
+ />
+ </div>
+ <div class="form-group">
+ <label for="place">PYTHON</label>
+ <input
+ type="text"
+ class="form-control"
+ id="lastName"
+ name="place"
+ />
+ </div>
+ <div class="form-group">
+
+ <div class="form-group">
+ <label for="phno">ENGLISH</label>
+ <input
+ type="number"
+ class="form-control"
+ id="email"
+ name="phno"
+ />
+ </div>
+ <div class="form-group">
+ <label for="cmp">BIG DATA</label>
+ <input
+ type="text"
+ class="form-control"
+ id="password"
+ name="cmp"
+ />
+ </div>
+ <input type="submit" class="rip" name="ins" value="SUBMIT" />
+ </form>
+ <form method="POST" action="markstab.php">
+ <input type="submit" class="rip" name="ins" value="view table"/>
+ </form>
+</div>
+ </body>
+</html>

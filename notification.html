@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notifications</title>
+<link rel="stylesheet" href="notification.css">
+<style>
+body{
+        background-repeat:no-repeat;
+        background-size:1600px 800px;
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210814/pngtree-blue-purple-simple-gradient-background-image_760572.jpg');
+}
+</style>
+</head>
+<body class="background-image">
+<div id="myDIV" class="header" style="background-color:black">
+ <h2 style="margin:5px">Notifications</h2>
+ <input type="text" id="myInput" placeholder="Title...">
+ <span onclick="newElement()" class="addBtn"> Add</span>
+</div>
+<ul id="myUL">
+ <li>WT LAB Submition by 10th Aug</li>
+ <li>Last day to register for Cognizant 11Aug</li>
+ <li>20th Project-2 submission for WT LAB </li>
+ <li> 25th Semster Time-Table</li>
+</ul>
+<script>
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+ var span = document.createElement("SPAN");
+ var txt = document.createTextNode("\u00D7");
+ span.className = "close";
+ span.appendChild(txt);
+ myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+ close[i].onclick = function() {
+ var div = this.parentElement;
+ div.style.display = "none";
+ }
+}
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+ if (ev.target.tagName === 'LI') {
+ ev.target.classList.toggle('checked');
+ }
+}, false);
+function newElement() {
+ var li = document.createElement("li");
+ var inputValue = document.getElementById("myInput").value;
+ var t = document.createTextNode(inputValue);
+ li.appendChild(t);
+ if (inputValue === '') {
+ alert("You must write something!");
+ } else {
+ document.getElementById("myUL").appendChild(li);
+ }
+ document.getElementById("myInput").value = "";
+ var span = document.createElement("SPAN");
+ var txt = document.createTextNode("\u00D7");
+ span.className = "close";
+ span.appendChild(txt);
+ li.appendChild(span);
+ for (i = 0; i < close.length; i++) {
+ close[i].onclick = function() {
+ var div = this.parentElement;
+ div.style.display = "none";
+ }
+ }
+}
+</script>
+</body>
+</html>

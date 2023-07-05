@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Student registration form</title>
+ <link rel="stylesheet" type="text/css" href="stdreg.css" />
+<style>
+body{
+background-image:
+url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000');
+ background-size: 1540px 800px
+}
+.container {
+margin-top:100px;
+ padding: 16px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height:650px;
+width:400px;
+margin-right:auto;
+margin-left:auto;
+}
+</style>
+ </head>
+ <body class="background-image" >
+ <div class="container" style="background-color:white">
+ <div class="panel-heading text-center">
+ <h1>ADMIN LOGIN</h1>
+ </div>
+ <div class="panel-body">
+ <form method="POST" action="loginadminconn.php">
+<div class="form-group">
+ <label for="id">UserName</label>
+ <input
+ type="text"
+ class="form-control"
+ id="firstName"
+ name="id"
+ required/>
+ <div class="form-group">
+    <label for="name">TID</label>
+    <input
+    type="text"
+    class="form-control"
+    id="firstName"
+    name="name"
+    required/>
+ </div>
+ <div class="form-group">
+ <label for="name">Password</label>
+ <input
+ type="text"
+ class="form-control"
+ id="firstName"
+ name="name"
+ required/>
+ <input type="submit" class="rip" name="ins" value="SUBMIT" />
+ </form>
+ <form method="POST" action="loginadmintab.php">
+ <input type="submit" class="rip" name="ins" value="view table"/>
+ </form>
+ <form action="admin.html">
+     <button>Login</button>
+ </form>
+</div>
+ </body>
+</html>

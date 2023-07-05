@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="login.css">
+<style>
+body{
+ background-image:
+url('https://media.istockphoto.com/photos/bookshelves-and-laptops-are-placed-on-the-library-deskelearning-class-picture-id1177967778?k=20&m=1177967778&s=170667a&w=0&h=JMl4KAxhDeJXxkAhND7WJBsFKiMO247yKK-3KmQ1UOU=');
+ background-size: 1600px 720px;
+}
+</style>
+</head>
+<script>
+ function myFunction() {
+ alert("Continue to login..");
+ }
+</script>
+<body class="background-image" >
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h3>
+    <font size="8 " color="#003300"><u>Login Student</u> </font></h3>
+<br>
+ <form>
+ <label for="usrname"><font size="6 " color="#990066">Username</font></label>
+ <input type="text" id="usrname" name="usrname" required>
+ <label for="psw"><font size="6 " color="#990066">Password</font></label>
+ <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+title="UserName and Password don't match" required>
+
+ <button style="background-color:black" formaction="student.html">Submit</button>
+ </form>
+</div>
+<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+ document.getElementById("message").style.display = "block";
+}
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+ document.getElementById("message").style.display = "none";
+}
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+ // Validate lowercase letters
+ var lowerCaseLetters = /[a-z]/g;
+ if(myInput.value.match(lowerCaseLetters)) {
+ letter.classList.remove("invalid");
+ letter.classList.add("valid");
+ } else {
+ letter.classList.remove("valid");
+ letter.classList.add("invalid");
+ }
+
+ // Validate capital letters
+ var upperCaseLetters = /[A-Z]/g;
+ if(myInput.value.match(upperCaseLetters)) {
+ capital.classList.remove("invalid");
+ capital.classList.add("valid");
+ } else {
+ capital.classList.remove("valid");
+ capital.classList.add("invalid");
+ }
+ // Validate numbers
+ var numbers = /[0-9]/g;
+ if(myInput.value.match(numbers)) {
+ number.classList.remove("invalid");
+ number.classList.add("valid");
+ } else {
+ number.classList.remove("valid");
+ number.classList.add("invalid");
+ }
+
+ // Validate length
+ if(myInput.value.length >= 8) {
+ length.classList.remove("invalid");
+ length.classList.add("valid");
+ } else {
+ length.classList.remove("valid");
+ length.classList.add("invalid");
+ }
+}
+</script>
+</body>
+</html>
